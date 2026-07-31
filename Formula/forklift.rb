@@ -5,23 +5,23 @@
 class Forklift < Formula
   desc "A CLI tool for managing merge branches across repositories using Google Sheets"
   homepage "https://github.com/afk-ankit/forklift"
-  version "0.0.8"
+  version "0.0.9"
   license "MIT"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/afk-ankit/forklift/releases/download/v0.0.8/forklift_Darwin_x86_64.tar.gz"
-      sha256 "695ba6856bd5bf087bd16876a6cfbc7319efc8ce17f9dfe94a34e5534cd5bad9"
+      url "https://github.com/afk-ankit/forklift/releases/download/v0.0.9/forklift_Darwin_x86_64.tar.gz"
+      sha256 "1b234974cc8bf92d6ebd4d22d13fafbcb46e99581e775e1aea846e253cf5ac4f"
 
       define_method(:install) do
         bin.install "forklift"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/afk-ankit/forklift/releases/download/v0.0.8/forklift_Darwin_arm64.tar.gz"
-      sha256 "2d28ae58dd0773099fc688aa9c45d0497ee389dfb666254ea7a2981c9c3ac7ce"
+      url "https://github.com/afk-ankit/forklift/releases/download/v0.0.9/forklift_Darwin_arm64.tar.gz"
+      sha256 "9ad6652ca55d05c60e0c712029fb0b708cbcf7a4c90653e433a8d79f4524bdf3"
 
       define_method(:install) do
         bin.install "forklift"
@@ -31,15 +31,15 @@ class Forklift < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/afk-ankit/forklift/releases/download/v0.0.8/forklift_Linux_x86_64.tar.gz"
-      sha256 "f886422cea1b1a2a6a15d909650c21286815b194adca2cc307cb67421bfcb58c"
+      url "https://github.com/afk-ankit/forklift/releases/download/v0.0.9/forklift_Linux_x86_64.tar.gz"
+      sha256 "3dac85cc316ce103aee32515925c69e2015651755e94148383ff5c7ad28c9343"
       define_method(:install) do
         bin.install "forklift"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/afk-ankit/forklift/releases/download/v0.0.8/forklift_Linux_arm64.tar.gz"
-      sha256 "515a892c5fdfa43b7b531334870e4123b409c40c171e57a05f915e1c80a31db0"
+      url "https://github.com/afk-ankit/forklift/releases/download/v0.0.9/forklift_Linux_arm64.tar.gz"
+      sha256 "bcf79f23fefa1ff0a00cb476ce6a0e0b008f4b87eb94bb0209f4d7e70ef1c29f"
       define_method(:install) do
         bin.install "forklift"
       end
